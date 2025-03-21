@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px auto;
+   
+    gap: 20px;
+}
+
+.video-section video {
+    width: 500px;
+    height: 280px;
+    margin-top: 100px;
+    border-radius: 5px;
+    background-color: black; 
+}
+
+.form-section {
+    background-color: white;
+    padding: 20px;
+    width: 600px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+
+.address-group {
+    display: flex;
+    gap: 5px;
+}
+
+.address-group select {
+    flex: 1;
+}
+
+.sub-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: gray;
+ 
+}
+
+.gender-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  
+}
+
+.gender-group label {
+    font-weight: normal;
+}
+
+input[type="file"] {
+    padding: 3px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
+button[type="reset"] {
+    background-color: gray;
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="video-section">
+        <video controls>
+            <source src="SampleVideo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="form-section">
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">BirthDate</label>
+                <input type="date" id="birthdate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="abc@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <div class="form-group">
+                <label>Address</label>
+                <div class="address-group">
+                    <select>
+                        <option>Maharashtra</option>
+                        <option>Gujarat</option>
+                        <option>Delhi</option>
+                    </select>
+                    <select>
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                    </select>
+                    <select>
+                        <option>Pune</option>
+                        <option>Thane</option>
+                    </select>
+                </div>
+                <div class="sub-labels">
+                    <span>State</span> <span>District</span> <span>City</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-group">
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Upload photo</label>
+                <input type="file" id="photo">
+            </div>
+
+            <div class="form-group">
+                <label for="course">Select your course</label>
+                <select id="course">
+                    <option>Select course</option>
+                    <option>Web Development</option>
+                    <option>Data Science</option>
+                    <option>AI [&] ML</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Register</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+
